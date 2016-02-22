@@ -1,0 +1,21 @@
+{
+  "name": "express-group-routes",
+  "version": "1.0.0",
+  "description": "Simple way to group routes in Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "routes",
+    "router",
+    "group",
+    "nodejs"
+  ],
+  "author": "Dirk Groenen <dirk@bitlabs.nl>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
