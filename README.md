@@ -9,7 +9,7 @@ Using this module you can easily create route groups in ExpressJS. It transforms
 var app = require('express');
 var router1 = app.Router();
 ...
-var router1.1 = router1.Router();
+var router1_1 = router1.Router();
 ...
 var router2 = app.Router();
 ...
@@ -24,7 +24,7 @@ require('express-group-routes');
 app.group((router) => {
     // Router1
     router.group((router) => {
-        // Router1.1
+        // Router1_1
     });
 });
 
