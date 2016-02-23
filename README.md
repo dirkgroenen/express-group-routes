@@ -1,9 +1,39 @@
 Express group routes
 --------------------
 
-Simple way to group your routes in Express.
+> Simple way to group your routes in Express.
 
-#Quick start
+Using this module you can easily create route groups in ExpressJS. It transforms the following code:
+
+```javascript
+var app = require('express');
+var router1 = app.Router();
+...
+var router1.1 = router1.Router();
+...
+var router2 = app.Router();
+...
+```
+
+into:
+
+```javascript
+var app = require('express');
+require('express-group-routes');
+
+app.group((router) => {
+    // Router1
+    router.group((router) => {
+        // Router1.1
+    });
+});
+
+app.group(() => {
+    // Router2
+});
+```
+
+##Quick start
 
 If you want to prefix all routes with a certain URL you can use the `group` method as following: 
 
@@ -27,7 +57,7 @@ app.group((router) => {
 });
 ```
 
-# Real world example
+## Real world example
 
 The code below is used in one of my projects and shows you how you can use this simple module to write (in my opinion) cleaner code.
 
